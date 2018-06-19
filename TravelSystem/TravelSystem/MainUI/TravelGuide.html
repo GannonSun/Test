@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>福州市旅游查询系统</title>
+    <link rel="stylesheet" href="Style.css" />
+    <!--<link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.6/"></script>-->
+    <!--本地部署-->
+    <link rel="stylesheet" href="http://localhost/arcgis_js_api/library/4.6/esri/css/main.css" />
+    <script src="http://localhost/arcgis_js_api/library/4.6/dojo/dojo.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <!--百度密钥-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=niTqGgHj9Zn2XL1KGKabWfTTMAwk13AX"></script>
+    <!--百度地图BMapLib类库引用-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+</head>
+<body>
+    <div id="main">
+        <div id="logo">
+            <img src="福州旅游.png" id="logopng"/>
+            
+            <div id="title">
+                <!--<a href="javascript:void(0)" id="a-rank">热门景区</a>
+                <a href="javascript:void(0)" id="a-select">周边查询</a>
+                <a href="javascript:void(0)" id="a-collect">我的收藏</a>-->
+                <ul >
+                     <li ><a href="#" id="a-rank">热门景区</a>
+                         <ul >
+                             <li><a href="#" id="a1">爱爬山戳我</a></li>
+                             <li><a href="#" id="a2">逛公园戳我</a></li>
+                             <li><a href="#" id="a3">游乐园戳我</a></li>
+                             <li><a href="#" id="a4">访古迹戳我</a></li>
+                         </ul>
+                     </li>
+                     <li ><a href="#" id="a-select">周边查询</a></li>
+                     <li ><a href="#"id="a-collect">我的收藏</a></li>
+                </ul>
+
+            </div>
+            <div id="searchbox">
+                <input id="textinput" name="word" type="text" autocomplete="off" maxlength="256" placeholder="搜你想去的景区" style="height:25px;" size="35px"/>
+                <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+                <button id="searchbutton" style="height:27px;width:40px;line-height:13px;">搜索</button>
+            </div>
+        </div>
+        <!--将guide分为三个div，每点击一个a标签就切换一个-->
+        <div id="guide" style="overflow-x:hidden;overflow-y:auto">
+            <div id="rank" style="overflow-x:hidden;overflow-y:auto">
+                <!--<div id="classrank">
+                    <a href="javascript:void(0)" id="a1">爱爬山戳我</a>
+                    <a href="javascript:void(0)" id="a2">逛公园戳我</a>
+                    <a href="javascript:void(0)" id="a3">游乐园戳我</a>
+                </div>-->
+                <div id="rankpanel">
+
+                </div>
+            </div>
+
+            <div id="select" style="overflow-x:hidden;overflow-y:auto">
+                &nbsp&nbsp起点：<input id="start" type="text" autocomplete="off" size="20px" placeholder="你想从哪出发" /><br />
+                &nbsp&nbsp终点：<input id="end" type="text" autocomplete="off" size="20px" placeholder="你想到哪儿去" />
+                <button id="busbutton" style="height:27px;width:40px;line-height:13px;">出发</button><br />
+                --------------------------------------------
+                <div id="bus-result">
+
+                </div>
+            </div>
+
+            <div id="collect" style="overflow-x:hidden;overflow-y:auto">
+                <p id="p1"></p>
+            </div>
+        </div>
+
+        <div id="map">
+
+        </div>
+    </div>
+</body>
+</html>

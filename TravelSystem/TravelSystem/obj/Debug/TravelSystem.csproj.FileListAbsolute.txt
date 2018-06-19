@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\webgis实习\TravelSystem\TravelSystem\bin\TravelSystem.dll
+C:\Users\Administrator\Desktop\webgis实习\TravelSystem\TravelSystem\bin\TravelSystem.pdb
+C:\Users\Administrator\Desktop\webgis实习\TravelSystem\TravelSystem\obj\Debug\TravelSystem.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\webgis实习\TravelSystem\TravelSystem\obj\Debug\TravelSystem.dll
+C:\Users\Administrator\Desktop\webgis实习\TravelSystem\TravelSystem\obj\Debug\TravelSystem.pdb
